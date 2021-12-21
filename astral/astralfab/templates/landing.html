@@ -5,8 +5,8 @@
   @import url('https://fonts.googleapis.com/css2?family=Italiana&family=Poppins:wght@200;400&display=swap');
 
   #top {
-    background-image: linear-gradient(to bottom, #FE828C, white);
-    height: 300px;
+    background: #FE828C;
+    height: 200px;
     width: 100%;
   }
 
@@ -18,111 +18,121 @@
     font-weight: bolder;
   }
 
-  
-  /*  carosel */
+  /*  carousel */
+  .carousel_background {
+    padding-top: 20px;
+    margin-top: 100px;
+    padding-left: 130px;
+    padding-bottom:20px;
+  }
 
-  .carousel {
-    position: relative;
+  .slider {
+    width: 1000px;
     height: 500px;
-    width: 88%;
-    margin-left: -25px;
-    margin-top: 20px;
-  }
-
-
-  .carousel__images {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-  }
-
-  .carousel__track-container:hover {
-    box-shadow: 2px 2px 20px black;
-  }
-
-  .carousel__track-container {
-    background-color: green;
-    height: 100%;
-    left: 100px;
-    border-radius: 24px;
-    position: relative;
+    border-radius: 10px;
     overflow: hidden;
-    /* covers the excess space left during transition of slide */
   }
 
-  .carousel__track {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    position: relative;
-    height: 100%;
-    transition: transform 250ms ease-in;
-  }
-
-  .carousel__slide {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .carousel__button {
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
-    background-color: white;
-    border-radius: 50%;
-    border: 0;
-    cursor: pointer;
-  }
-
-  .carousel__button--left:hover {
-    box-shadow: 2px 2px 10px black;
-  }
-
-  .carousel__button--left {
-    left: 40px;
-    border-radius: 50%;
-  }
-
-  .carousel__button--right:hover {
-    box-shadow: 2px 2px 10px black;
-  }
-
-  .carousel__button--right {
-    right: -160px;
-    border-radius: 50%;
-  }
-
-  .carousel__button img {
-    width: 30px;
-    border-radius: 50%;
-  }
-
-  .carousel__nav {
+  .slides {
+    width: 500%;
+    height: 500px;
     display: flex;
-    justify-content: center;
-    padding-left: 200px;
   }
 
-  .carousel__indicator {
-    border: 0;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    margin: 10 12px;
-    background-color: grey;
-  }
-
-  .carousel__indicator.current-slide {
-    background: rgba(0, 0, 0, .75);
-  }
-
-  .is-hidden {
+  .slides input {
     display: none;
   }
 
+  .slide {
+    width: 20%;
+    transition: 2s;
+  }
+  .slider img{
+    width: 1000px;
+    height: 500px;
+  }
+  .slide img {
+    width: 1000px;
+    height: 500px;
+  }
+
+  .navigation-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    margin-left: 80px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .manual-btn {
+    border: 2px solid #FE828C;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+
+  .manual-btn:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  .manual-btn:hover {
+    background: #FE828C;
+  }
+
+  #radio1:checked~.first {
+    margin-left: 0;
+  }
+
+  #radio2:checked~.first {
+    margin-left: -20%;
+  }
+
+  #radio3:checked~.first {
+    margin-left: -40%;
+  }
+
+  #radio4:checked~.first {
+    margin-left: -60%;
+  }
+
+  .navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 1000px;
+    justify-content: center;
+    margin-top: 460px;
+  }
+
+  .navigation-auto div {
+    border: 2px solid #FE828C;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+
+  .navigation-auto div:not(:last-child) {
+    margin-top: 40px;
+  }
+
+  #radio1:checked~.navigation-auto .auto-btn1 {
+    background: #FE828C;
+  }
+
+  #radio2:checked~.navigation-auto .auto-btn2 {
+    background: #FE828C;
+  }
+
+  #radio3:checked~.navigation-auto .auto-btn3 {
+    background: #FE828C;
+  }
+
+  #radio4:checked~.navigation-auto .auto-btn4 {
+    background: #FE828C;
+  }
+
+  /*end*/
 
   #phn1 {
     font-size: 20px;
@@ -209,13 +219,52 @@
   }
 
   .num_left {
-    padding-left: 30px;
+    padding-left: 40px;
     margin-top: 50px;
   }
 
   .num_right {
     padding-left: 1150px;
     margin-top: 50px;
+  }
+  #sub_content_left_1 {
+    font-size: 20px;
+    color: grey;
+    width: 700px;
+    padding-left: 200px;
+    padding-top: 20px;
+  }
+
+  #img_right_1 {
+    width: 300px;
+    height: 300px;
+    margin-left: 800px;
+    margin-top: -130px;
+    border-width: 5px;
+    border-color: #FE828C;
+    border-style: solid;
+    border-radius: 10px;
+  }
+  
+  #sub_content_right_1 {
+    font-size: 20px;
+    color: grey;
+    width: 550px;
+    margin-left: 550px;
+    margin-top: 20px;
+
+
+  }
+
+  #img_left_1 {
+    width: 300px;
+    height: 300px;
+    border-width: 5px;
+    border-color: #FE828C;
+    border-style: solid;
+    border-radius: 10px;
+    margin-left: 150px;
+    margin-top: -130px;
   }
 
   #sub_img {
@@ -308,46 +357,6 @@
     font-size: 30px;
   }
 
-  #sub_content_left_1 {
-    font-size: 20px;
-    color: grey;
-    width: 700px;
-    padding-left: 200px;
-    padding-top: 20px;
-  }
-
-  #img_right_1 {
-    width: 300px;
-    height: 300px;
-    margin-left: 800px;
-    margin-top: -130px;
-    border-width: 5px;
-    border-color: #FE828C;
-    border-style: solid;
-    border-radius: 10px;
-  }
-
-  #sub_content_right_1 {
-    font-size: 20px;
-    color: grey;
-    width: 550px;
-    margin-left: 550px;
-    margin-top: 20px;
-
-
-  }
-
-  #img_left_1 {
-    width: 300px;
-    height: 300px;
-    border-width: 5px;
-    border-color: #FE828C;
-    border-style: solid;
-    border-radius: 10px;
-    margin-left: 150px;
-    margin-top: -130px;
-  }
-
   .gallery {
     margin-top: 150px;
   }
@@ -423,49 +432,37 @@
     }
 
     /*  carosel */
+    .carousel_background {
+    padding-top: 20px;
+    padding-left:20px;
+    padding-bottom:20px;
+  }
 
-    .carousel {
-      position: relative;
-      height: 200px;
-      width: 80%;
-      margin-left: -50px;
-    }
-
-    .carousel__track-container {
-      background-color: green;
-      height: 100%;
-      left: 100px;
-      border-radius: 24px;
-      position: relative;
-      overflow: hidden;
-      /* covers the excess space left during transition of slide */
-    }
-
-    .carousel__button--left {
-      left: 60px;
-      border-radius: 50%;
-    }
-
-    .carousel__button--right {
-      right: -135px;
-      border-radius: 50%;
-    }
-
-    .carousel__button img {
-      width: 20px;
-      border-radius: 50%;
-    }
-
-    .carousel__indicator {
-      border: 0;
-      border-radius: 50%;
-      width: 9px;
-      height: 10px;
-      margin: 10 12px;
-      background-color: grey;
-    }
-
-
+  .slider {
+    width: 380px;
+    height:200px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .navigation-manual {
+    position: absolute;
+    width: 200px;
+    margin-top: -340px;
+    display: flex;
+    justify-content: center;
+  }
+  .manual-btn:not(:last-child) {
+    margin-right: 20px;
+  }
+  .slider img{
+    width: 380px;
+    height:200px;
+  }
+  .slide img {
+    width: 380px;
+    height:200px;
+  }
+  /*end*/
 
     #phn1 {
       font-size: 12px;
@@ -698,6 +695,7 @@
       padding-left: 100px;
     }
 
+
     #ftr {
       background-color: #FE828C;
       margin-top: 100px;
@@ -768,149 +766,53 @@
     <p id="phn2"><i class="fas fa-phone-alt"></i><a style="color:black;text-decoration: none;" href="tel:+919900312345">
         9900312345</a></p>
   </header>
-  <div class="carousel">
-    <button class="carousel__button carousel__button--left is-hidden">
-      <img src="{% static 'left_arrow.png' %}">
-    </button>
+  <div class="carousel_background">
+    <div class="slider">
+      <div class="slides">
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <input type="radio" name="radio-btn" id="radio5">
 
-    <div class="carousel__track-container">
-      <ul class="carousel__track">
-        <li class="carousel__slide current-slide">
-          <img class="carousel__images" src="{% static 'carousel1.jpg' %}">
-        </li>
-        <li class="carousel__slide current-slide">
-          <img class="carousel__images" src="{% static 'carousel2.jpg' %}">
-        </li>
-        <li class="carousel__slide">
-          <img class="carousel__images" src="{% static 'carousel4.jpg' %}">
-        </li>
-      </ul>
-    </div>
-
-    <button class="carousel__button carousel__button--right">
-      <img src="{% static 'right_arrow.png' %}">
-    </button>
-
-    <div class="carousel__nav">
-      <button class="carousel__indicator current-slide"></button>
-      <button class="carousel__indicator"></button>
-      <button class="carousel__indicator"></button>
+        <div class="slider first">
+          <img src="{% static 'carousel1.JPG' %}">
+        </div>
+        <div class="slide">
+          <img src="{% static 'carousel2.jpg' %}">
+        </div>
+        <div class="slide">
+          <img src="{% static 'carousel3.jpg' %}">
+        </div>
+        <div class="slide">
+          <img src="{% static 'carousel4.jpg' %}">
+        </div>
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+        <div class="auto-btn4"></div>
+      </div>
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
     </div>
   </div>
-
-
-  <script>
-    const track = document.querySelector('.carousel__track'); //searches for carousel__track
-    const slides = Array.from(track.children);
-    const nextButton = document.querySelector('.carousel__button--right');
-    const prevButton = document.querySelector('.carousel__button--left');
-    const dotsNav = document.querySelector('.carousel__nav');
-    const dots = Array.from(dotsNav.children);
-
-    const slideWidth = slides[0].getBoundingClientRect().width;
-
-    // arrange the slides next to one another
-
-    // slides[0].style.left = slideWidth * 0 + 'px';
-    // slides[1].style.left = slideWidth * 1 + 'px';
-    // slides[2].style.left = slideWidth * 2 + 'px';
-
-    const setSlidePosition = (slide, index) => {
-      slide.style.left = slideWidth * index + 'px';
-    };
-
-    slides.forEach(setSlidePosition);
-
-
-    const moveToSlide = (track, currentSlide, targetSlide) => {
-      track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-      currentSlide.classList.remove('current-slide');
-      targetSlide.classList.add('current-slide');
-
-    }
-
-    const updateDots = (currentDot, targetDot) => {
-      currentDot.classList.remove('current-slide');
-      targetDot.classList.add('current-slide');
-
-    }
-
-    const hideShowArrows = (slide, prevButton, nextButton, targetIndex) => {
-      if (targetIndex === 0) {
-        prevButton.classList.add('is-hidden');
-        nextButton.classList.remove('is-hidden');
-      } else if (targetIndex === slides.length - 1) {
-        prevButton.classList.remove('is-hidden');
-        nextButton.classList.add('is-hidden');
-      } else {
-        prevButton.classList.remove('is-hidden');
-        nextButton.classList.remove('is-hidden')
+  <script type="text/javascript">
+    var counter = 1;
+    setInterval(function () {
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if (counter > 4) {
+        counter = 1;
       }
-    }
-
-
-
-    // when I click left, move slides to the left
-
-    prevButton.addEventListener('click', e => {
-      const currentSlide = track.querySelector('.current-slide');
-      const prevSlide = currentSlide.previousElementSibling;
-      const currentDot = dotsNav.querySelector('.current-slide');
-      const prevDot = currentDot.previousElementSibling;
-      const prevIndex = slides.findIndex(slide => slide === prevSlide);
-
-
-      //move to the next slide
-
-      moveToSlide(track, currentSlide, prevSlide);
-      updateDots(currentDot, prevDot);
-      hideShowArrows(slides, prevButton, nextButton, prevIndex)
-
-
-    })
-
-
-    // when I click right, move slides to the right
-
-    nextButton.addEventListener('click', e => {
-      const currentSlide = track.querySelector('.current-slide');
-      const nextSlide = currentSlide.nextElementSibling;
-      const currentDot = dotsNav.querySelector('.current-slide');
-      const nextDot = currentDot.nextElementSibling;
-      const nextIndex = slides.findIndex(slide => slide === nextSlide);
-
-      //move to the next slide
-      moveToSlide(track, currentSlide, nextSlide);
-      updateDots(currentDot, nextDot);
-      hideShowArrows(slides, prevButton, nextButton, nextIndex)
-
-    })
-
-    //when I click nav indicators,move to that slide
-
-
-    dotsNav.addEventListener('click', e => {
-      //what indicator was clicked on?
-      const targetDot = e.target.closest('button');
-      if (!targetDot) return;
-
-      const currentSlide = track.querySelector('.current-slide');
-      const currentDot = dotsNav.querySelector('.current-slide');
-      const targetIndex = dots.findIndex(dot => dot === targetDot);
-      const targetSlide = slides[targetIndex];
-
-      moveToSlide(track, currentSlide, targetSlide);
-      updateDots(currentDot, targetDot);
-      hideShowArrows(slides, prevButton, nextButton, targetIndex)
-
-
-    })
-
-
-
+    }, 5000);
   </script>
 
-  </section>
+
+
   <center>
     <p id="service_head"> Services We Provide</p>
   </center>
@@ -1076,6 +978,7 @@
 
   <div class="gallery">
     <p id="gallery">Gallery:</p>
+    
   </div>
   <center>
     <div class="about">
@@ -1092,13 +995,13 @@
     </center>
     <script src="https://kit.fontawesome.com/5ddb5485f2.js" crossorigin="anonymous"></script>
     <p id="info"><i class="fas fa-map-marker-alt"></i><a style="color:black;text-decoration: none;" target="_blank"
-        href="https://goo.gl/maps/pZ5CMZ3D39bgsbgs6"> #69/A, Near Life Style Apartment, J P Nagar 8th Phase, 2nd Block,
+        href="https://goo.gl/maps/pZ5CMZ3D39bgsbgs6" target="_blank"> #69/A, Near Life Style Apartment,Royal county, 1st Block, J P Nagar 8th Phase, 
         Bangalore- 560078</a></p>
     <p id="phn"><i style="font-weight: bold;" class="fab fa-whatsapp"></i> <a style="color:black;text-decoration: none;"
-        href="https://wa.me/919066426666">Whatsapp Us</a></p>
+        href="https://wa.me/919066426666" target="_blank">Whatsapp Us</a></p>
     <p id="mail"><i class="fas fa-envelope"></i><a style="color:black;text-decoration: none;"
-        href="mailto:Astralfs2015@gmail.com">Astralfs2015@gmail.com</a></p>
-    <p id="copy">&copy 2021 Astral Fab Solutions. All rights reversed</p>
+        href="mailto:Astralfs2015@gmail.com" target="_blank"> Astralfs2015@gmail.com</a></p>
+    <p id="copy">&copy 2021 Astral Fab Solutions. All Rights Reserved</p>
   </footer>
 
 </body>
@@ -1166,17 +1069,3 @@
 
 
 
-<!-- <style>
- 
-
-</style>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  </head>
-  <body>
-    
-  </body>
-</html>-->
