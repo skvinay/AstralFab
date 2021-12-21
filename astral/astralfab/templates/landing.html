@@ -23,7 +23,7 @@
     padding-top: 20px;
     margin-top: 100px;
     padding-left: 130px;
-    padding-bottom:20px;
+    padding-bottom: 20px;
   }
 
   .slider {
@@ -47,10 +47,12 @@
     width: 20%;
     transition: 2s;
   }
-  .slider img{
+
+  .slider img {
     width: 1000px;
     height: 500px;
   }
+
   .slide img {
     width: 1000px;
     height: 500px;
@@ -227,6 +229,7 @@
     padding-left: 1150px;
     margin-top: 50px;
   }
+
   #sub_content_left_1 {
     font-size: 20px;
     color: grey;
@@ -245,7 +248,7 @@
     border-style: solid;
     border-radius: 10px;
   }
-  
+
   #sub_content_right_1 {
     font-size: 20px;
     color: grey;
@@ -372,17 +375,11 @@
   #ftr {
     background-color: #FE828C;
     margin-top: 100px;
+    padding-top:50px;
     padding-bottom: 20px;
   }
 
-  #cnt_info {
-    font-size: 20px;
-    padding-left: 50px;
-    color: black;
-    padding-top: 50px;
-    font-weight: bold;
-
-  }
+ 
 
   #info {
     font-size: 15px;
@@ -393,8 +390,7 @@
   }
 
   #phn {
-    font-size: 15px;
-    padding-left: 50px;
+    font-size: 40px;
     font-weight: bolder;
     padding-left: 550px;
     margin-top: -60px;
@@ -403,12 +399,25 @@
   }
 
   #mail {
-    font-size: 15px;
+    font-size: 40px;
+    font-weight: bolder;
+    padding-left: 750px;
+    margin-top: -55px;
+  }
+
+  #insta {
+    font-size: 40px;
+    font-weight: bolder;
+    padding-left: 950px;
+    margin-top: -55px;
+  }
+
+  #fb {
+    font-size: 40px;
     padding-left: 50px;
     font-weight: bolder;
-    padding-left: 850px;
-    margin-top: -38px;
-
+    padding-left: 1150px;
+    margin-top: -55px;
   }
 
   #copy {
@@ -433,36 +442,41 @@
 
     /*  carosel */
     .carousel_background {
-    padding-top: 20px;
-    padding-left:20px;
-    padding-bottom:20px;
-  }
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-bottom: 20px;
+    }
 
-  .slider {
-    width: 380px;
-    height:200px;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .navigation-manual {
-    position: absolute;
-    width: 200px;
-    margin-top: -340px;
-    display: flex;
-    justify-content: center;
-  }
-  .manual-btn:not(:last-child) {
-    margin-right: 20px;
-  }
-  .slider img{
-    width: 380px;
-    height:200px;
-  }
-  .slide img {
-    width: 380px;
-    height:200px;
-  }
-  /*end*/
+    .slider {
+      width: 380px;
+      height: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .navigation-manual {
+      position: absolute;
+      width: 200px;
+      margin-top: -340px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .manual-btn:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    .slider img {
+      width: 380px;
+      height: 200px;
+    }
+
+    .slide img {
+      width: 380px;
+      height: 200px;
+    }
+
+    /*end*/
 
     #phn1 {
       font-size: 12px;
@@ -720,7 +734,7 @@
     }
 
     #phn {
-      font-size: 15px;
+      font-size: 30px;
       padding-left: 50px;
       font-weight: bolder;
       color: black;
@@ -729,11 +743,29 @@
     }
 
     #mail {
-      font-size: 15px;
-      padding-left: 50px;
+      font-size: 30px;
+      padding-left: 150px;
       font-weight: bolder;
-      margin-top: 20px;
+      margin-top: -45px;
     }
+    #insta {
+    font-size: 40px;
+    font-weight: bolder;
+    padding-left: 250px;
+    margin-top: -50px;
+  }
+    #fb {
+    font-size: 40px;
+    font-weight: bolder;
+    padding-left: 350px;
+    margin-top: -57px;
+  }
+
+  #copy {
+    padding-left: 50px;
+    padding-top: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
 
     #copy {
       padding-left: 50px;
@@ -782,7 +814,7 @@
           <img src="{% static 'carousel2.jpg' %}">
         </div>
         <div class="slide">
-          <img src="{% static 'carousel3.jpg' %}">
+          <img src="{% static 'carousel3.jpeg' %}">
         </div>
         <div class="slide">
           <img src="{% static 'carousel4.jpg' %}">
@@ -808,7 +840,7 @@
       if (counter > 4) {
         counter = 1;
       }
-    }, 5000);
+    }, 3000);
   </script>
 
 
@@ -834,11 +866,11 @@
     </div>
     <div class="sub_head_2">
       <p>SLEEK FRAMES</p>
-      <img id="sub_img" src="{% static 'cor1.jpg' %}">
+      <img id="sub_img" src="{% static 'cor1.JPG' %}">
     </div>
     <div class="sub_head_3">
       <p>FLY DOORS</p>
-      <img id="sub_img" src="{% static 'cor4.jpg' %}">
+      <img id="sub_img" src="{% static 'cor4.JPG' %}">
     </div>
   </div>
   <div class="sub_head_4">
@@ -870,7 +902,7 @@
   </div>
   <div class="sub_head_6">
     <p>VERTICAL & <br> ROLLER BLINDS</p>
-    <img id="sub_img" src="{% static 'vertical_blinds.jpg' %}">
+    <img id="sub_img" src="{% static 'Vertical_Blinds.jpg' %}">
   </div>
   </div>
   <div class="sub_head_7">
@@ -978,7 +1010,7 @@
 
   <div class="gallery">
     <p id="gallery">Gallery:</p>
-    
+
   </div>
   <center>
     <div class="about">
@@ -990,82 +1022,23 @@
   </center>
 
   <footer id="ftr">
-    <center>
-      <p id="cnt_info">Contact Info</p>
-    </center>
     <script src="https://kit.fontawesome.com/5ddb5485f2.js" crossorigin="anonymous"></script>
     <p id="info"><i class="fas fa-map-marker-alt"></i><a style="color:black;text-decoration: none;" target="_blank"
-        href="https://goo.gl/maps/pZ5CMZ3D39bgsbgs6" target="_blank"> #69/A, Near Life Style Apartment,Royal county, 1st Block, J P Nagar 8th Phase, 
+        href="https://goo.gl/maps/pZ5CMZ3D39bgsbgs6" target="_blank"> #69/A, Near Life Style Apartment,Royal county, 1st
+        Block, J P Nagar 8th Phase,
         Bangalore- 560078</a></p>
-    <p id="phn"><i style="font-weight: bold;" class="fab fa-whatsapp"></i> <a style="color:black;text-decoration: none;"
-        href="https://wa.me/919066426666" target="_blank">Whatsapp Us</a></p>
-    <p id="mail"><i class="fas fa-envelope"></i><a style="color:black;text-decoration: none;"
-        href="mailto:Astralfs2015@gmail.com" target="_blank"> Astralfs2015@gmail.com</a></p>
+    <p id="phn"><a style="color:black;text-decoration: none;" href="https://wa.me/919066426666" target="_blank"><i
+          style="font-weight: bold;" class="fab fa-whatsapp"></i></a></p>
+    <p id="mail"><a style="color:black;text-decoration: none;" href="mailto:Astralfs2015@gmail.com" target="_blank"><i
+          class="fas fa-envelope"></i></a></p>
+    <p id="insta"><a style="color:black;text-decoration: none;" href="mailto:Astralfs2015@gmail.com" target="_blank">
+        <i class="fab fa-instagram"></i></a></p>
+    <p id="fb"><a style="color:black;text-decoration: none;"
+        href="https://www.facebook.com/profile.php?id=100075344201795" target="_blank">
+        <i class="fab fa-facebook-square"></i></a></p>
     <p id="copy">&copy 2021 Astral Fab Solutions. All Rights Reserved</p>
   </footer>
 
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
