@@ -182,7 +182,7 @@
 
   #head_left {
     font-size: 35px;
-    font-family: Arial;
+    font-family: 'poppins',sans-serif;
     color: rgb(89, 6, 105);
     margin-top: -80px;
     padding-left: 150px;
@@ -190,10 +190,11 @@
 
   #head_right {
     font-size: 35px;
-    font-family: Arial;
+    font-family: 'poppins',sans-serif;
     color: rgb(89, 6, 105);
     margin-top: -80px;
-    padding-left: 730px;
+    text-align: right;
+    padding-right: 150px;
   }
 
   #num {
@@ -253,6 +254,7 @@
     font-size: 20px;
     color: grey;
     width: 550px;
+    text-align:right ;
     margin-left: 550px;
     margin-top: 20px;
 
@@ -360,26 +362,97 @@
     font-size: 30px;
   }
 
-  .gallery {
-    margin-top: 150px;
+  /*gallery*/
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
   }
 
-  #gallery {
-    font-size: 40px;
-    font-family: Arial;
-    color: rgb(89, 6, 105);
-    margin-top: -80px;
-    padding-left: 100px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 100px 20px 0 20px;
+  }
+
+  .container .heading {
+    width: 50%;
+    padding-bottom: 50px;
+  }
+
+  .container .heading h3 {
+    font-size: 3em;
+    font-weight: bolder;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #222;
+  }
+
+  .container .heading h3 span {
+    font-weight: 100;
+  }
+
+  .container .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .container .box .dream {
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+  }
+
+  .container .box .dream img {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+
+  .container .box .dream img:hover{
+    box-shadow:8px 8px 8px grey;
+  }
+
+  @media only screen and (max-width: 769px) {
+    .container .box {
+      flex-direction: column;
+    }
+
+    .container .box .dream {
+      width: 100%;
+    }
+
+
+
+
+
+  }
+
+  @media only screen and (max-width: 643px) {
+    .container .heading {
+      width: 100%;
+    }
+
+    .container .heading h3 {
+      font-size: 1em;
+
+    }
+
   }
 
   #ftr {
     background-color: #FE828C;
     margin-top: 100px;
-    padding-top:50px;
+    padding-top: 50px;
     padding-bottom: 20px;
   }
 
- 
+
 
   #info {
     font-size: 15px;
@@ -529,7 +602,7 @@
       font-size: 30px;
       font-family: Arial;
       color: rgb(89, 6, 105);
-      padding-left: 20px;
+      padding-right: 30px;
       padding-top: 20px;
     }
 
@@ -696,19 +769,9 @@
       margin-left: 90px;
       margin-top: 10px;
     }
-
-    .gallery {
-      margin-top: 150px;
-    }
-
-    #gallery {
-      font-size: 40px;
-      font-family: Arial;
-      color: rgb(89, 6, 105);
-      margin-top: -80px;
-      padding-left: 100px;
-    }
-
+    .about {
+    margin-left:30px;
+  }
 
     #ftr {
       background-color: #FE828C;
@@ -748,30 +811,27 @@
       font-weight: bolder;
       margin-top: -45px;
     }
-    #insta {
-    font-size: 40px;
-    font-weight: bolder;
-    padding-left: 250px;
-    margin-top: -50px;
-  }
-    #fb {
-    font-size: 40px;
-    font-weight: bolder;
-    padding-left: 350px;
-    margin-top: -57px;
-  }
 
-  #copy {
-    padding-left: 50px;
-    padding-top: 50px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
+    #insta {
+      font-size: 40px;
+      font-weight: bolder;
+      padding-left: 250px;
+      margin-top: -50px;
+    }
+
+    #fb {
+      font-size: 40px;
+      font-weight: bolder;
+      padding-left: 350px;
+      margin-top: -57px;
+    }
 
     #copy {
       padding-left: 50px;
       padding-top: 50px;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
+
   }
 </style>
 <!DOCTYPE html>
@@ -811,13 +871,13 @@
           <img src="{% static 'carousel1.JPG' %}">
         </div>
         <div class="slide">
-          <img src="{% static 'carousel2.jpg' %}">
+          <img src="{% static 'carousel2.JPG' %}">
         </div>
         <div class="slide">
           <img src="{% static 'carousel3.jpeg' %}">
         </div>
         <div class="slide">
-          <img src="{% static 'carousel4.jpg' %}">
+          <img src="{% static 'carousel4.JPG' %}">
         </div>
         <div class="auto-btn1"></div>
         <div class="auto-btn2"></div>
@@ -1008,10 +1068,51 @@
   </div>
 
 
-  <div class="gallery">
-    <p id="gallery">Gallery:</p>
+ 
+  <div class="container">
+    <div class="heading">
+      <h3>Photo <span>Gallery</span></h3>
+    </div>
 
+    <div class="box">
+
+      <div class="dream">
+        <img src="{% static '1.jpg' %}">
+        <img src="{% static '2.jpg' %}">
+        <img src="{% static '3.jpeg' %}">
+        <img src="{% static '4.jpeg' %}">
+        <img src="{% static '5.jpg' %}">
+        <img src="{% static '16.jpeg' %}">
+        <img src="{% static '17.jpeg' %}">
+        <img src="{% static '18.jpeg' %}">
+        <img src="{% static '19.jpeg' %}">
+        <img src="{% static '20.jpeg' %}">
+        <img src="{% static '23.jpg' %}">
+
+      </div>
+
+      <div class="dream">
+        <img src="{% static '6.jpg' %}">
+        <img src="{% static '7.jpg' %}">
+        <img src="{% static '8.jpg' %}">
+        <img src="{% static '9.jpg' %}">
+        <img src="{% static '10.jpg' %}">
+        <img src="{% static '21.png' %}">
+        <img src="{% static '22.jpg' %}">
+      </div>
+
+      <div class="dream">
+        <img src="{% static '11.jpeg' %}">
+        <img src="{% static '12.jpeg' %}">
+        <img src="{% static '13.jpg' %}">
+        <img src="{% static '14.jpg' %}">
+        <img src="{% static '15.jpeg' %}">
+        <img src="{% static '25.jpg' %}"> 
+
+      </div>
+    </div>
   </div>
+
   <center>
     <div class="about">
       <p id="about">About Us</p>
